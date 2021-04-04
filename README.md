@@ -1,4 +1,4 @@
-# 꼬리별 [KKo-Ri-Byeol]
+# 꼬리별 [KKoribyeol]
 ## 데이터베이스 (Paeony)
 ![작약](https://user-images.githubusercontent.com/48639421/113073378-f0f3d180-9203-11eb-8079-57e4ad8b3b3b.jpg)  
 푸시 서비스가 필요해서 사용해본 NHN Cloud의 TOAST 푸시 서비스,  
