@@ -101,8 +101,12 @@ CREATE TABLE template(
     title VARCHAR(40) NOT NULL,
     body VARCHAR(255) NOT NULL,
 
+    project_code VARCHAR(28) NOT NULL,
+
     created_at DATETIME NOT NULL,
     updated_at DATETIME NOT NULL,
+
+    FOREIGN KEY (project_code) REFERENCES project(code) ON DELETE CASCADE,
 
     PRIMARY KEY (id)
 );
