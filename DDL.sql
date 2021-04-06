@@ -100,11 +100,12 @@ CREATE TABLE template(
     id BIGINT AUTO_INCREMENT,
     title VARCHAR(40) NOT NULL,
     body VARCHAR(255) NOT NULL,
-
     project_code VARCHAR(28) NOT NULL,
 
     created_at DATETIME NOT NULL,
     updated_at DATETIME NOT NULL,
+
+    UNIQUE (title, body, project_code),
 
     FOREIGN KEY (project_code) REFERENCES project(code) ON DELETE CASCADE,
 
