@@ -76,9 +76,13 @@ CREATE TABLE push_notification_history(
     title VARCHAR(40) NOT NULL,
     body VARCHAR(255) NOT NULL,
 
+    project_code VARCHAR(28) NOT NULL,
+
     create_at DATETIME NOT NULL,
     complete_at DATETIME,
     reserve_at DATETIME,
+
+    FOREIGN KEY (project_code) REFERENCES project(code) ON DELETE CASCADE,
 
     PRIMARY KEY (id)
 );
