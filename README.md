@@ -6,4 +6,4 @@ TOAST 푸시 서비스를 사용하면서 느꼈던 불편한 점을 개선하�
 모두가 사용할 수 있는 푸시 서비스를 만드는 것이 목표인 프로젝트!  
 
 ## ERD
-![image](https://user-images.githubusercontent.com/48639421/113643435-4aa14380-96bd-11eb-9ea1-73f751413e13.png)
+![image](https://user-images.githubusercontent.com/48639421/114386793-a479a000-9bcc-11eb-950f-5d207e708bfe.png)
