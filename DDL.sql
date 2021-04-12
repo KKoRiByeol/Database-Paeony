@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS target_group;
 DROP TABLE IF EXISTS project;
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS push_result;
-DROP TABLE IF EXISTS push_history;
+DROP TABLE IF EXISTS push_notification_history;
 
 CREATE TABLE account(
     id VARCHAR(20) NOT NULL,
@@ -70,11 +70,11 @@ CREATE TABLE affiliation(
     PRIMARY KEY (id)
 );
 
-CREATE TABLE push_history(
+CREATE TABLE push_notification_history(
     id BIGINT AUTO_INCREMENT,
 
     title VARCHAR(40) NOT NULL,
-    content VARCHAR(255) NOT NULL,
+    body VARCHAR(255) NOT NULL,
 
     create_at DATETIME NOT NULL,
     complete_at DATETIME,
@@ -88,10 +88,12 @@ CREATE TABLE push_result(
 
     target_id BIGINT NOT NULL,
     history_id BIGINT NOT NULL,
-    status VARCHAR(8) NOT NULL,
+    status CHAR(7) NOT NULL,
+
+    UNIQUE (target_id, history_id),
 
     FOREIGN KEY (target_id) REFERENCES target(id),
-    FOREIGN KEY (history_id) REFERENCES push_history(id),
+    FOREIGN KEY (history_id) REFERENCES push_notification_history(id),
 
     PRIMARY KEY (id)
 );
